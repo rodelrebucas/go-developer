@@ -2,4 +2,7 @@
 
 Tables of contents:
 
-1. [go-web-app](go-web-app) - basic web application using [_gin_](https://github.com/gin-gonic/gin)
+1. [Go basics](go-basics) - the basics of Go 
+2. [Web server with standard library](web-app-sample) - (todo)
+3. [Rest api with Echo, Gorm and Swago (validator)](todo-rest-api) - (todo)
+4. [Go web](go-web-app) - basic web application using [_gin_](https://github.com/gin-gonic/gin)
