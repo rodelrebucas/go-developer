@@ -50,3 +50,10 @@ Run the generated executable
 `go install github.com/rodelrebucas/go-basics`
 
 Generates executable inside `/bin folder`
+
+
+#### E. Notes
+
+- [variables](variables)
+
+- [primitives](primitives)
