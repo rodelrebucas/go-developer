@@ -60,7 +60,7 @@ fmt.Printf("%v\n", len(a)) // 3
 fmt.Printf("%v\n", cap(a)) // 100
 ```
 
-H. Append 
+H. Append  - append(parentSlice, elements)
 ```
 a := []int{}
 fmt.Println(a) // []
