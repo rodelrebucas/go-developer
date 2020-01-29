@@ -80,3 +80,9 @@ Generates executable inside `/bin folder`
 
 - [switch](switch)
 
+
+References:
+
+Channels: https://www.youtube.com/watch?v=f6kdp27TYZs
+
+Go basics: https://www.youtube.com/watch?v=YS4e4q9oBaU
