@@ -52,8 +52,31 @@ Run the generated executable
 Generates executable inside `/bin folder`
 
 
-#### E. Notes
+#### E. Contents
 
 - [variables](variables)
 
 - [primitives](primitives)
+
+- [arrays](arrays)
+
+- [defer](defer)
+
+- [functions](functions)
+
+- [constants](constants)
+
+- [if](if)
+
+- [loops](loops)
+
+- [map](map)
+
+- [panick](panick)
+
+- [pointers](pointers)
+
+- [struct](struct)
+
+- [switch](switch)
+
