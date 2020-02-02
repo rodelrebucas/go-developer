@@ -38,9 +38,16 @@ func greet4(msg string) string {
 }
 ```
 
-E. Pointer return value is created on Heap rather than the stack,
+E. Return a pointer - pointer return value is created on Heap rather than the stack,
 since variables in the function is created on that function's stack
 and deleted after the fn finishes execution  or  returns
+```
+func sum(values ...int) *int {
+	result := 0
+	// some logic here
+	return &result // allocate to heap 
+}
+```
 
 E. Named return value
 ```
@@ -52,4 +59,59 @@ func greet5(msg string) (echo string) {
 }
 ```
 
-F. Returning value and error
+F. Returning multiple value from function call
+```
+func main() {
+	d, err := divide(5.0, 0.0)
+	// some error checking here
+	// err != nil
+	fmt.Println(d, err)
+}
+
+func divide(a, b float64) (float64, error) {
+	if b == 0.0 {
+		return 0.0, fmt.Errorf("cannot divide by zero")
+	}
+	return a / b, nil
+}
+```
+
+G. Anonymous function and immediately invoke function
+```
+func main() {
+	func() {
+		// some logic here
+	} ()
+}
+```
+
+H. Function as variable
+```
+f := func() {
+	fmt.Println("Function variable")
+}
+f()
+```
+
+I. Method
+```
+func main() {
+	g := greeter{
+		greeting: "Hello",
+		name:     "Go",
+	}
+	g.greet() //  Hello Go
+
+}
+
+type greeter struct {
+	greeting string
+	name     string
+}
+
+// method greeter
+func (g greeter) greet() { // operating on a copy
+	fmt.Println(g.greeting, g.name)
+}
+// func (g *greeter) greet() {}  - // operating on a pointer
+```
