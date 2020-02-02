@@ -109,9 +109,9 @@ type greeter struct {
 	name     string
 }
 
-// method greeter
-func (g greeter) greet() { // operating on a copy
+// method greet
+func (g greeter) greet() { // (g greeter) is value receiver - operating on a copy
 	fmt.Println(g.greeting, g.name)
 }
-// func (g *greeter) greet() {}  - // operating on a pointer
+// func (g *greeter) greet() {}  - // (g greeter) is pointer receiver - operating on a pointer
 ```
