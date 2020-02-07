@@ -8,7 +8,7 @@ fmt.Println(n) // false
 
 B. Signed Integers
 
-Types: 
+Types:
 
 signed:
 
@@ -20,11 +20,12 @@ unsigned:
 
 byte - is an alias for 8bit unsigned integer so unint8 == byte
 
-*Operation on different types is invalid
+\*Operation on different types is invalid
 
 C. Bit operators
 
-    AND, OR, EXCLUSIVE OR, AND NOT     
+    AND, OR, EXCLUSIVE OR, AND NOT
+
 ```
 a := 10 // 1010
 b := 3 //  0011
@@ -34,7 +35,6 @@ fmt.Println( a | b) // 11 = 1011
 fmt.Println(a ^ b) // 9 = 1001
 fmt.Println(a &^ b) // 8 = 1000
 ```
-
 
 D. Bit shifting
 
@@ -59,7 +59,7 @@ var n complex64 = 1 + 2i // (1 + 2i)
 
 F. Text
 
-String - any utf8 character
+String - any utf8 character, read-only slice of bytes
 
 ```
 s := "String example"
@@ -84,10 +84,10 @@ fmt.Printf("%v", s1 + s2) // StringExample
 ```
 s1 := "String"
 s2 := []byte(s1)
-fmt.Printf("%v", s2) // [83 116 114 105 110 103] 
+fmt.Printf("%v", s2) // [83 116 114 105 110 103]
 ```
 
-G. Rune  - alias type of int32 , also represents a Unicode code point
+G. Rune - alias type of int32 , also represents a Unicode code point
 
 ```
  r := 'a' // 97
