@@ -17,7 +17,7 @@ type Writer interface {
 
 ```
 
-C. Implicitly implements the Writer interface by creating the method signature _Write_
+B.1. Implicitly implements the Writer interface by creating the method signature _Write_
 
 ```
 type ConsoleWriter struct{}
@@ -28,7 +28,7 @@ func (vw ConsoleWriter) Write(data []byte) (int, error) {
 }
 ```
 
-D. Using custom type other than struct
+C. Using custom type other than struct
 
 ```
 func main() {
@@ -52,11 +52,11 @@ func (ic *myInt) Double() int {
 }
 ```
 
-E. Creating interface with more than one methods
+D. Creating interface with more than one methods
 
 ```
 func main() {
-	
+
 	var wc writerCloser = newBufferedWriterCloser() // Call the constsructor
 	wc.Write([]byte("I am testing buffers"))
 	wc.Close()
@@ -135,15 +135,86 @@ func newBufferedWriterCloser() *bufferedWriterCloser {
 	}
 }
 
-// with close()
-/** Output
+// Output with close()
+/**
 I am tes
 ting buf
 fers
 */
 
-// without close()
+// Output without close()
 /** I am tes
 ting buf
 */
+```
+
+E. Using an empty interface
+
+```
+var myObj interface{} = newBufferedWriterCloser()
+// type cast the empty interface
+if wc, ok := myObj.(writerCloser); ok {
+	wc.Write([]byte("I am testing buffers"))
+	wc.Close()
+}
+```
+
+F. Using empty interface on switch to check for data type
+
+```
+var i interface{} = 1
+switch i.(type) {
+case int:
+    fmt.Println("int")
+    break // exit early
+    fmt.Println("This will not print")
+case float64:
+    fmt.Println("float64")
+default:
+    fmt.Println("Invalid type")
+} // int
+```
+
+G. Pointer receiver vs value receiver.
+
+If using a value receiver then you can initialize using a value or using the address
+
+```
+var wc writerCloser = writerCloser()
+var wc2 writerCloser = &writerCloser()
+
+
+type writer interface {
+	Write([]byte)(int, error)
+}
+
+
+type closer interface {
+	Closer() error
+}
+
+type writerCloser struct{
+	writer
+	closer
+	}
+
+type myWriterCloser struct{}
+
+func (wc writerCloser) Write(data []byte) (int, error) {
+	return 0, nil
+}
+
+func (wc writerCloser) Close() error {
+	return nil
+}
+```
+
+If receivers uses any pointer then initialize using the address
+
+```
+var wc2 writerCloser = &writerCloser()
+
+func (wc *writerCloser) Write(data []byte) (int, error) {
+	return 0, nil
+}
 ```

@@ -1,4 +1,5 @@
 A. Simple use, case should not overlap
+
 ```
 switch choice := 1; choice {
 case 1:
@@ -10,7 +11,8 @@ default:
 } // 1
 ```
 
-B. Tagless, case can overlap,  runs the first matching case
+B. Tagless, case can overlap, runs the first matching case
+
 ```
 choice := 1
 switch {
@@ -24,6 +26,7 @@ default:
 ```
 
 C. Fallthrough - executes next case
+
 ```
 choice2 := 1
 switch {
@@ -37,19 +40,4 @@ default:
 }
 // 1
 // 1, 2, 3
-```
-
-D. Using interface on switch to check for data type
-```
-var i interface{} = 1
-switch i.(type) {
-case int:
-    fmt.Println("int")
-    break // exit early
-    fmt.Println("This will not print")
-case float64:
-    fmt.Println("float64")
-default:
-    fmt.Println("Invalid type")
-} // int
 ```
