@@ -45,11 +45,13 @@ Tables of contents:
 2.  Setup paths:
 
     GOROOT - path to go folder
+
     GOPATH - path where your go packages will be downloaded
 
 3.  Add bin folders to path:
 
     PATH=$PATH:$GOROOT/bin
+
     PATH:$PATH:$GOPATH/bin
 
 4.  To build package on your current workspace
@@ -85,7 +87,7 @@ Run the generated executable
 
 Generates executable inside `/bin folder`
 
-References:
+**References**:
 
 Go web application: https://golang.org/doc/articles/wiki/
 
