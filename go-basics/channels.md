@@ -48,7 +48,14 @@ go func(ch chan<- int) {
 }(ch)
 ```
 
-C. Looping through channel
+C. Buffered channels creates storage to accept multiple incoming data
+
+```
+// creates 50 int storage
+ch := make(chan int, 50)
+```
+
+D. Looping through channel
 
 ```
 go func(ch <-chan int) {
@@ -67,7 +74,7 @@ go func(ch chan<- int) {
 }(ch)
 ```
 
-D. Waiting on multiple communication operations through `select`
+E. Waiting on multiple communication operations through `select`
 
 ```
 
