@@ -1,4 +1,4 @@
-A. Struct - Collection data , struct are copied by value
+A. Struct - Collection of data , struct are copied by value
 
 B. Creating struct
 ```
