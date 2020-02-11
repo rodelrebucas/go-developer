@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+)
 
 func main() {
-	fmt.Println("start goroutines")
+	runtime.GOMAXPROCS(100)
+	fmt.Printf("Threads: %v: ", runtime.GOMAXPROCS(-1))
 }

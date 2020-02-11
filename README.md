@@ -2,7 +2,7 @@
 
 Tables of contents:
 
-- [arrays](go-basics/arrays)
+- [arrays](go-basics/arrays.md)
 
 - [channels](go-basics/channels)
 
