@@ -4,39 +4,39 @@ Tables of contents:
 
 - [arrays](go-basics/arrays.md)
 
-- [channels](go-basics/channels)
+- [channels](go-basics/channels.md)
 
-- [constants](go-basics/constants)
+- [constants](go-basics/constants.md)
 
-- [defer](go-basics/defer)
+- [defer](go-basics/defer.md)
 
-- [functions](go-basics/functions)
+- [functions](go-basics/functions.md)
 
-- [goroutines](go-basics/goroutines)
+- [goroutines](go-basics/goroutines.md)
 
-- [basic http server](go-basics/http-server)
+- [basic http server](go-basics/http-server.md)
 
-- [if](go-basics/if)
+- [if](go-basics/if.md)
 
-- [interface](go-basics/interface)
+- [interface](go-basics/interface.md)
 
-- [loops](go-basics/loops)
+- [loops](go-basics/loops.md)
 
-- [map](go-basics/map)
+- [map](go-basics/map.md)
 
-- [panick](go-basics/panick)
+- [panick](go-basics/panick.md)
 
-- [pointers](go-basics/pointers)
+- [pointers](go-basics/pointers.md)
 
-- [primitives](go-basics/primitives)
+- [primitives](go-basics/primitives.md)
 
-- [slice](go-basics/slice)
+- [slice](go-basics/slice.md)
 
-- [struct](go-basics/struct)
+- [struct](go-basics/struct.md)
 
-- [switch](go-basics/switch)
+- [switch](go-basics/switch.md)
 
-- [variables](go-basics/variables)
+- [variables](go-basics/variables.md)
 
 #### A. Setup:
 
