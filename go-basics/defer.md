@@ -1,4 +1,5 @@
 A. Defer - executes a function before the main function returns
+
 ```
 fmt.Println("start")
 defer fmt.Println("middle")
@@ -9,6 +10,7 @@ fmt.Println("end")
 ```
 
 B. Executes in LIFO
+
 ```
 fmt.Println("start")
 defer fmt.Println("middle")
@@ -19,6 +21,7 @@ fmt.Println("end")
 ```
 
 C. Closing a resource before function returns
+
 ```
     import (
 	"fmt"
@@ -39,6 +42,7 @@ C. Closing a resource before function returns
 ```
 
 D. Defer process variables at the time it is called
+
 ```
 a := "start"
 fmt.Println(a)

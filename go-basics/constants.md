@@ -1,4 +1,4 @@
-A. Typed 
+A. Typed
 
 `const a int = 1`
 
@@ -6,7 +6,7 @@ B. Inferred
 
 `const a = 1`
 
-C. Enumerated 
+C. Enumerated
 
 - has initial value of zero
 - Arithmetic. bitwise operations, bitshifting are allowed at compile time

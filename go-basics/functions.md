@@ -1,4 +1,5 @@
 A. Passing multiple arguments with the same type
+
 ```
 greet("Hi", "Ed") // Hi Ed
 
@@ -8,6 +9,7 @@ func greet(msg, name string) { // parameter, parameter type
 ```
 
 B. Passing pointer type argument
+
 ```
 name := "Edy"
 msg := "Hello"
@@ -19,6 +21,7 @@ func greet2(msg, name *string) { // parameter, parameter type
 ```
 
 C. Variatic parameter
+
 ```
 greet3("Hello", "Ed", "Edy") // Hello [Ed Edy]
 
@@ -29,6 +32,7 @@ func greet3(msg string, names ...string) {
 ```
 
 D. Return value
+
 ```
 fmt.Println(greet4("Hellooo")) // Echoed Hellooo
 
@@ -40,16 +44,18 @@ func greet4(msg string) string {
 
 E. Return a pointer - pointer return value is created on Heap rather than the stack,
 since variables in the function is created on that function's stack
-and deleted after the fn finishes execution  or  returns
+and deleted after the fn finishes execution or returns
+
 ```
 func sum(values ...int) *int {
 	result := 0
 	// some logic here
-	return &result // allocate to heap 
+	return &result // allocate to heap
 }
 ```
 
 E. Named return value
+
 ```
 fmt.Println(greet5("Heyy")) // Heyy echoed
 
@@ -60,6 +66,7 @@ func greet5(msg string) (echo string) {
 ```
 
 F. Returning multiple value from function call
+
 ```
 func main() {
 	d, err := divide(5.0, 0.0)
@@ -77,6 +84,7 @@ func divide(a, b float64) (float64, error) {
 ```
 
 G. Anonymous function and immediately invoke function
+
 ```
 func main() {
 	func() {
@@ -86,6 +94,7 @@ func main() {
 ```
 
 H. Function as variable
+
 ```
 f := func() {
 	fmt.Println("Function variable")
@@ -94,6 +103,7 @@ f()
 ```
 
 I. Method
+
 ```
 func main() {
 	g := greeter{

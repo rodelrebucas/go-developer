@@ -1,5 +1,5 @@
-
 A. Simple for loop, prints 0 to 4
+
 ```
 for i := 0; i < 5; i++ {
     fmt.Println(i)
@@ -7,6 +7,7 @@ for i := 0; i < 5; i++ {
 ```
 
 B. Initializing Multiple values
+
 ```
 for i, j := 0, 0; i < 5; i, j = i+1, j+1 {
     fmt.Println(i, j)
@@ -14,6 +15,7 @@ for i, j := 0, 0; i < 5; i, j = i+1, j+1 {
 ```
 
 C. Initializer outside for block
+
 ```
 count := 0
 for ; count < 5; count++ {
@@ -22,6 +24,7 @@ for ; count < 5; count++ {
 ```
 
 D. Do while for loop
+
 ```
 num := 0
 for num < 10 {
@@ -31,6 +34,7 @@ for num < 10 {
 ```
 
 E. Breaking an infinite loop
+
 ```
 i := 0
 for {
@@ -43,6 +47,7 @@ for {
 ```
 
 F. Using Continue statements
+
 ```
 for i := 0; i < 10; i++ {
     if i%2 == 0 {
@@ -53,6 +58,7 @@ for i := 0; i < 10; i++ {
 ```
 
 G. Breaking nested loop using Label
+
 ```
 LoopLabel:
 	for i := 1; i <= 3; i++ {
@@ -70,6 +76,7 @@ LoopLabel:
 H. Looping collections
 
 1. Array
+
 ```
 s := [3]int{1, 2, 3}
 
@@ -79,6 +86,7 @@ for k, v := range s {
 ```
 
 2. Map
+
 ```
 m := map[string]int{
     "a": 1,

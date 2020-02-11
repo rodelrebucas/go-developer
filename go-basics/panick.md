@@ -1,4 +1,4 @@
-A. Panick  - when application can not continue to function / execute - unrecoverable events
+A. Panick - when application can not continue to function / execute - unrecoverable events
 
 ```
 // import fmt and panic
@@ -19,7 +19,7 @@ C. Use `recover` to recover from `panic`. Use only inside `defer` functions
 // import fmt, panic, log
 func main() {
     fmt.Println("start")
-    // higer function in call stack will continue unless panic is re throwed 
+    // higer function in call stack will continue unless panic is re throwed
     panicker()
     fmt.Prinln("end")
 }
@@ -35,7 +35,7 @@ func panicker() {
             // start
             // panic start
             // Error: ...
-            // Panic details ... 
+            // Panic details ...
         }
     }()
     panic("something bad happened")

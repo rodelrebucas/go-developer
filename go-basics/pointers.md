@@ -1,4 +1,5 @@
 A. Pointer - contains the address in memory of the variable being pointed at.
+
 ```
 value := 1
 p2Value := &value // var p2Value *int = &value
@@ -9,7 +10,8 @@ fmt.Println(value, *p2Value)
 // 1 1.
 ```
 
-B. Pointer arithmetic - `this is not supported` unless / might be  through `unsafe` package
+B. Pointer arithmetic - `this is not supported` unless / might be through `unsafe` package
+
 ```
 a := [3]int{1, 2, 3}
 b := &a[0]
@@ -20,6 +22,7 @@ fmt.Printf("%v %p, %p", a, b, c) // value, pointer, pointer
 ```
 
 C. new - use to allocate zeroed storage and returns its address
+
 ```
 var ms *myStruct
 ms = new(myStruct)
