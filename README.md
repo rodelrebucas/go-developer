@@ -14,7 +14,7 @@ Tables of contents:
 
 - [goroutines](go-basics/goroutines.md)
 
-- [basic http server](go-basics/http-server.md)
+- [basic http server](go-basics/http-server/README.md)
 
 - [if](go-basics/if.md)
 
