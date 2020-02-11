@@ -87,6 +87,6 @@ Generates executable inside `/bin folder`
 
 References:
 
-Channels: https://www.youtube.com/watch?v=f6kdp27TYZs
+Go web application: https://golang.org/doc/articles/wiki/
 
 Go basics: https://www.youtube.com/watch?v=YS4e4q9oBaU
