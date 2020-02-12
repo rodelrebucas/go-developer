@@ -6,7 +6,7 @@ Tables of contents:
 
 - [channels](go-basics/channels.md)
 
-- [concurrency](go-basics/concurrency.md)
+- [concurrency](go-basics/concurrency.go)
 
 - [constants](go-basics/constants.md)
 
