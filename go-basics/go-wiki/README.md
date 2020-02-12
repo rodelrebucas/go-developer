@@ -1,5 +1,7 @@
 ## Sample go basic web app
 
+Run the app with `go run wiki.go`
+
 Specifications:
 
 1. Reads the content of a file from `data` folder and display it as a response
