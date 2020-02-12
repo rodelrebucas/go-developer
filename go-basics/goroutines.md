@@ -1,4 +1,4 @@
-A. Goroutines - lightweight threads compared to OS threads
+A. Goroutines - independently executing functions. Lightweight threads compared to OS threads
 
 ```
 import (

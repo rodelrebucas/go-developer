@@ -20,7 +20,7 @@ func main() {
 		wg.Done()
 	}()
 
-	// sending to (passes a copy)
+	// sending to (passes a copy), blocking statement until a receiver is found
 	go func() {
 		ch <- 1
 		wg.Done()
