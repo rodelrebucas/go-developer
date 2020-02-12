@@ -34,6 +34,9 @@ fmt.Println(a & b) // 2 = 0010
 fmt.Println( a | b) // 11 = 1011
 fmt.Println(a ^ b) // 9 = 1001
 fmt.Println(a &^ b) // 8 = 1000
+// AND NOT
+// a AND NOT b
+// 1010 & 1100 = 1000
 ```
 
 D. Bit shifting

@@ -51,13 +51,13 @@ func withMultiplexing() {
 	ch := multiplexer(boring("boring ch1"), boring("boring ch2"))
 
 	for i := 0; i < 10; i++ {
-		// Receives value from 2 channel without each blocking each other
+		// Receives value from 2 channels without each blocking each other
 		fmt.Printf("You say %q\n", <-ch)
 	}
 	fmt.Println("-----------------")
 }
 
-// B.Multiplexing
+// B. Multiplexing
 func multiplexer(ch1, ch2 <-chan string) <-chan string {
 	ch := make(chan string)
 	// Execute independently using goroutine to avoid blocking
@@ -73,3 +73,5 @@ func multiplexer(ch1, ch2 <-chan string) <-chan string {
 	}()
 	return ch
 }
+
+// Multiplexing can be done also with *select

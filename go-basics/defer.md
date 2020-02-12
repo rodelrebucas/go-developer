@@ -1,6 +1,7 @@
 A. Defer - executes a function before the main function returns
 
 ```
+// Executes in LIFO
 fmt.Println("start")
 defer fmt.Println("middle")
 fmt.Println("end")
@@ -9,18 +10,7 @@ fmt.Println("end")
 // middle
 ```
 
-B. Executes in LIFO
-
-```
-fmt.Println("start")
-defer fmt.Println("middle")
-fmt.Println("end")
-// end
-// middle
-// start
-```
-
-C. Closing a resource before function returns
+B. Closing a resource before function returns
 
 ```
     import (
@@ -41,7 +31,7 @@ C. Closing a resource before function returns
 	fmt.Printf("%s", robots)
 ```
 
-D. Defer process variables at the time it is called
+C. Defer process variables at the time it is called
 
 ```
 a := "start"

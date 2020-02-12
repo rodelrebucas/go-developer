@@ -15,12 +15,14 @@ B. Naming:
 1. lower case variables are scope to the package it belongs
 2. upper case variables are scope globally
 3. block scope are variables declared inside the function/block
+
    E.g
    var scopedHere string = ""
    var ScopedOutside string = ""
+
 4. the shorter the life the shorter the name
 5. Pascal or camelCase
-6. all acronmys should be capitalize
+6. all acronyms should be capitalize
 
 C. Sample Codes
 
@@ -35,7 +37,7 @@ func main() {
 	var i int
 	i = 42
 	var j int = 43
-	k := 44 // go infers the type, // used on inside function only
+	k := 44 // go infers the type, // used inside function only
     var myHTTP string = "httpDemo"
 
 	// Printing

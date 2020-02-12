@@ -78,7 +78,7 @@ D. Using _mutex_ to lock and unlock a part of code.
 
 - _Locks and unlocks during writing and reading a variable_ to avoid race conditions
 - _GOMAXPROCS variable limits the number of operating system threads that can execute user-level Go code simultaneously_
-  .[source](https://golang.org/pkg/runtime/#GOMAXPROCS)
+  .([source](https://golang.org/pkg/runtime/#GOMAXPROCS))
 
 ```
 var wg = sync.WaitGroup{}

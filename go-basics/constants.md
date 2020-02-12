@@ -9,7 +9,7 @@ B. Inferred
 C. Enumerated
 
 - has initial value of zero
-- Arithmetic. bitwise operations, bitshifting are allowed at compile time
+- Arithmetic, bitwise operations, bitshifting are allowed at compile time
 
 ```
 // Block scoped

@@ -19,7 +19,7 @@ C. Use `recover` to recover from `panic`. Use only inside `defer` functions
 // import fmt, panic, log
 func main() {
     fmt.Println("start")
-    // higer function in call stack will continue unless panic is re throwed
+    // higher function in call stack will continue unless panic is re throwed
     panicker()
     fmt.Prinln("end")
 }
