@@ -6,6 +6,8 @@ Tables of contents:
 
 - [channels](go-basics/channels.md)
 
+- [concurrency](go-basics/concurrency.md)
+
 - [constants](go-basics/constants.md)
 
 - [defer](go-basics/defer.md)
@@ -92,3 +94,5 @@ Generates executable inside `/bin folder`
 Go web application: https://golang.org/doc/articles/wiki/
 
 Go basics: https://www.youtube.com/watch?v=YS4e4q9oBaU
+
+Go concurrency: https://www.youtube.com/watch?v=f6kdp27TYZs
