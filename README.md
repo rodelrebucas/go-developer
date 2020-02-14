@@ -60,6 +60,24 @@ Tables of contents:
 
     GOPATH:\$GOPATH:/workspace-dir
 
+Updated setup: Using `go mod`
+
+1. No need to append _working dir_ to `GOPATH` to build inside `working dir`. Issue command `go build` on _working dir_ to build your app
+
+2. Initialize `go.mod` file with: `go mod init module/path/here`
+
+   Example:
+
+   example.com/user/hello
+
+3. Create folders:
+
+   bin/
+
+   pkg/
+
+4. Set built _binary_ path directory to your `bin/` folder: `go env -w GOBIN=`pwd`/bin`
+
 #### B. Workspace
 
 Create folder structure
@@ -68,12 +86,11 @@ Create folder structure
         /github.com - allows package to be fetch by `go get`
             /rodelrebucas
                 /app-name
-    pkg/ - contains intermediate binaries (for third parties)
     bin/ - contains binary files
 
 #### C. Building package
 
-Make sure GOPATH is setup correctly for building package inside workspace
+Make sure GOPATH is setup correctly for building package inside workspace or See _updated_ setup
 
 Run `go build <complete-package-dir>`
 
@@ -88,6 +105,55 @@ Run the generated executable
 `go install github.com/rodelrebucas/go-basics`
 
 Generates executable inside `/bin folder`
+
+#### E. Using your own package with go modules
+
+Create the folder structure:
+
+    workspace/
+        your/
+            path/
+                packagename/
+                    example.go
+    bin/
+    main.go
+    go.mod
+
+In go.mod (Using `go mod init`):
+
+```
+module path/to/module
+
+go 1.13
+```
+
+In main.go
+
+```
+import your/path/packagename
+
+```
+
+#### F. Using go modules to automatically download dependencies
+
+Example: main.go
+
+```
+import github.com/some/module
+```
+
+`go install` and `go build` will automatically handle dependecies
+
+go.mod file will be:
+
+```
+module path/to/module
+
+go 1.13
+
+require github.com/some/module vsome.version
+```
+
 
 **References**:
 
