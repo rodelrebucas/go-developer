@@ -103,7 +103,11 @@ B2. Using your own package with go modules
 
 2. Initialize `go.mod` file with: `go mod init module/path/here`
 
-3) Set built _binary_ path directory to your `bin/` folder: `go env -w GOBIN=`pwd`/bin` and run `go install` to create binary file in `bin/` folder
+3)  Set built _binary_ path directory to your `bin/` folder:
+
+         go env -w GOBIN=`pwd`/bin
+
+4. `go install` to create binary file in `bin/` folder
 
 _go.mod_
 
@@ -128,7 +132,7 @@ Example: main.go
 import github.com/some/module
 ```
 
-`go install` and `go build` will automatically handle dependecies
+`go install` and `go build` will automatically handle dependencies
 
 go.mod file will be:
 
