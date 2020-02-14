@@ -60,39 +60,23 @@ Tables of contents:
 
     GOPATH:\$GOPATH:/workspace-dir
 
-Updated setup: Using `go mod`
-
-1. No need to append _working dir_ to `GOPATH` to build inside `working dir`. Issue command `go build` on _working dir_ to build your app
-
-2. Initialize `go.mod` file with: `go mod init module/path/here`
-
-   Example:
-
-   example.com/user/hello
-
-3. Create folders:
-
-   bin/
-
-   pkg/
-
-4. Set built _binary_ path directory to your `bin/` folder: `go env -w GOBIN=`pwd`/bin`
-
 #### B. Workspace
 
-Create folder structure
+Folder structures:
 
-    src/ - contains go source code
-        /github.com - allows package to be fetch by `go get`
-            /rodelrebucas
-                /app-name
-    bin/ - contains binary files
+B1.
 
-#### C. Building package
+    workingdir/
+        src/ - contains go source code
+            /github.com - allows package to be fetch by `go get`
+                /rodelrebucas
+                    /app-name
+                        main.go
+        bin/ - contains binary file
 
-Make sure GOPATH is setup correctly for building package inside workspace or See _updated_ setup
+Append workingdir to `GOPATH`
 
-Run `go build <complete-package-dir>`
+Build and install:
 
 `go build github.com/rodelrebucas/go-basics`
 
@@ -100,15 +84,11 @@ Run the generated executable
 
 `./go-basics`
 
-#### D. Installing built go package
+Installing package generates executable inside `/bin folder`
 
 `go install github.com/rodelrebucas/go-basics`
 
-Generates executable inside `/bin folder`
-
-#### E. Using your own package with go modules
-
-Create the folder structure:
+B2. Using your own package with go modules
 
     workspace/
         your/
@@ -119,7 +99,13 @@ Create the folder structure:
     main.go
     go.mod
 
-In go.mod (Using `go mod init`):
+1. No need to append _working dir_ to `GOPATH` to build inside `working dir`. Issue command `go build` on _working dir_ to build your app
+
+2. Initialize `go.mod` file with: `go mod init module/path/here`
+
+3) Set built _binary_ path directory to your `bin/` folder: `go env -w GOBIN=`pwd`/bin` and run `go install` to create binary file in `bin/` folder
+
+_go.mod_
 
 ```
 module path/to/module
@@ -127,14 +113,14 @@ module path/to/module
 go 1.13
 ```
 
-In main.go
+_main.go_
 
 ```
 import your/path/packagename
 
 ```
 
-#### F. Using go modules to automatically download dependencies
+#### C. Using go modules to automatically download dependencies
 
 Example: main.go
 
@@ -153,7 +139,6 @@ go 1.13
 
 require github.com/some/module vsome.version
 ```
-
 
 **References**:
 
