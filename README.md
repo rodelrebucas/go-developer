@@ -144,6 +144,8 @@ go 1.13
 require github.com/some/module vsome.version
 ```
 
+Delete downloaded modules: `go clean -modcache`
+
 **References**:
 
 Go web application: https://golang.org/doc/articles/wiki/
