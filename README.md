@@ -112,7 +112,7 @@ B2. Using your own package with go modules
 _go.mod_
 
 ```
-module path/to/module
+module module/name
 
 go 1.13
 ```
@@ -120,8 +120,27 @@ go 1.13
 _main.go_
 
 ```
-import your/path/packagename
+import module/name/packagename
 
+```
+
+_Import Notes_
+
+1. go **looks for the directory** where the dependencies are **installed** - this is the **GOPATH** directory.
+
+2. If it is not preset in **GOPATH**, go tries to download the module using the module/name/packagename, so if the moduel is named.
+
+3. By convention modules accesible on github is named: \*_github.com/module/packagename_
+
+4. If you have a local module and you want to **import local package**. Your go.mod may look like this:
+
+```
+module module/name
+
+require (
+    "some-dependency"
+)
+replace module/name =>  ./package
 ```
 
 #### C. Using go modules to automatically download dependencies
@@ -145,6 +164,10 @@ require github.com/some/module vsome.version
 ```
 
 Delete downloaded modules: `go clean -modcache`
+
+#### D.  Everything in the same package will be automatically visible to the others in the same package
+
+```
 
 **References**:
 
