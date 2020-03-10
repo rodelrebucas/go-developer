@@ -124,15 +124,15 @@ import module/name/packagename
 
 ```
 
-_Import Notes_
+_Important Notes_
 
 1. go **looks for the directory** where the dependencies are **installed** - this is the **GOPATH** directory.
 
-2. If it is not preset in **GOPATH**, go tries to download the module using the module/name/packagename, so if the moduel is named.
+2. If it is not present in **GOPATH**, go tries to download the module using the module/name/packagename.
 
-3. By convention modules accesible on github is named: \*_github.com/module/packagename_
+3. By convention modules accesible on github is named: _github.com/module/packagename_
 
-4. If you have a local module and you want to **import local package**. Your go.mod may look like this:
+4. If you have a local module and you want to **import local package**. Your *go.mod* may look like this:
 
 ```
 module module/name
