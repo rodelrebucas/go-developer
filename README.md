@@ -1,6 +1,14 @@
 ### The basics of Go
 
-Tables of contents:
+#### Tables of contents:
+
+A. Sample apps
+
+- [basic web app](go-wiki)
+
+- [queue](queue)
+
+B. Fundamentals:
 
 - [arrays](go-basics/arrays.md)
 
@@ -15,8 +23,6 @@ Tables of contents:
 - [functions](go-basics/functions.md)
 
 - [goroutines](go-basics/goroutines.md)
-
-- [basic web app](go-basics/go-wiki/README.md)
 
 - [if](go-basics/if.md)
 
