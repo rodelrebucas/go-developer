@@ -171,6 +171,8 @@ require github.com/some/module vsome.version
 
 Delete downloaded modules: `go clean -modcache`
 
+Remove unused package/s: `go mod tidy`
+
 #### D.  Everything in the same package will be automatically visible to the others in the same package
 
 ```
