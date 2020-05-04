@@ -10,11 +10,10 @@ import (
 	"github.com/labstack/echo/v4/middleware"
 )
 
-var maxJobs int = 100
-var maxTasks int = 50
-var maxWorker int = 10
+const MAX_JOBS int = 100
+const MAX_WORKER int = 10
 
-var jobsChan = make(chan queue.Job, 2)
+var jobsChan = make(chan queue.Job, MAX_JOBS)
 
 func enqueue(j queue.Job, jobs chan<- queue.Job) bool {
 	select {
@@ -33,7 +32,7 @@ func worker(jChan <-chan queue.Job) {
 }
 
 func createWorkerPool() {
-	for i := 0; i <= maxWorker; i++ {
+	for i := 0; i <= MAX_WORKER; i++ {
 		go worker(jobsChan)
 	}
 }
