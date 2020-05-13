@@ -62,10 +62,6 @@ B. Fundamentals:
 
     PATH:$PATH:$GOPATH/bin
 
-4.  To build package on your current workspace
-
-    GOPATH:\$GOPATH:/workspace-dir
-
 #### B. Workspace
 
 Folder structures:
@@ -105,7 +101,7 @@ B2. Using your own package with go modules
     main.go
     go.mod
 
-1. No need to append _working dir_ to `GOPATH` to build inside `working dir`. Issue command `go build` on _working dir_ to build your app
+1. Issue command `go build` on _working dir_ to build your app
 
 2. Initialize `go.mod` file with: `go mod init module/path/here`
 
