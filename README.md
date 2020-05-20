@@ -163,13 +163,20 @@ module path/to/module
 go 1.13
 
 require github.com/some/module vsome.version
+
 ```
+
+
+
+#### D.  Everything in the same package will be automatically visible to the others in the same package
 
 Delete downloaded modules: `go clean -modcache`
 
 Remove unused package/s: `go mod tidy`
 
-#### D.  Everything in the same package will be automatically visible to the others in the same package
+#### Building single binary
+
+`CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o <binary-name> <root-folder-your-go-module>`
 
 ```
 
