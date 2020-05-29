@@ -43,13 +43,3 @@ b[1] = 200
 fmt.Println(a) // [1 200 3]
 fmt.Println(*b) // [1 200 3]
 ```
-
-F. Make - creates array with zeroed values
-
-```
-// make(type, size, capacity)
-a := make([]int, 3, 100)
-fmt.Println(a)             // [0 0 0]
-fmt.Printf("%v\n", len(a)) // 3
-fmt.Printf("%v\n", cap(a)) // 100
-```

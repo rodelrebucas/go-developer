@@ -23,3 +23,13 @@ fmt.Println(a) // [1 2]
 fmt.Println(len(a)) // 2
 fmt.Println(cap(a)) // 2
 ```
+
+C. Make - creates array with zeroed values
+
+```
+// make(type, size, capacity)
+a := make([]int, 3, 100)
+fmt.Println(a)             // [0 0 0]
+fmt.Printf("%v\n", len(a)) // 3
+fmt.Printf("%v\n", cap(a)) // 100
+```
