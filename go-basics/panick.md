@@ -27,7 +27,7 @@ func main() {
 func panicker() {
     // this function will panic and not continue
     fmt.Println("panic start")
-    def func() {
+    defer func() {
         if err := recover(); err != nil {
             log.Println("Error: ", err) // gets the panic error
             // with re-panic
