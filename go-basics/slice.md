@@ -5,9 +5,9 @@ a := []int{1, 2, 3, 5, 6}
 b := a
 b[1] = 5
 c := a[2:]
-fmt.Println(a)      // [1 5 3]
-fmt.Println(len(a)) // 3
-fmt.Println(cap(a)) // 3
+fmt.Println(a)      // [1 5 3 5 6]
+fmt.Println(len(a)) // 5
+fmt.Println(cap(a)) // 5
 fmt.Println(c)      // [3 5 6]
 ```
 
