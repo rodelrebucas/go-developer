@@ -107,7 +107,11 @@ B2. Using your own package with go modules
 
 3)  Set built _binary_ path directory to your `bin/` folder:
 
-         go env -w GOBIN=`pwd`/bin
+        go env -w GOBIN=`pwd`/bin
+
+        or
+
+        export GOBIN=path/to/bin
 
 4. `go install` to create binary file in `bin/` folder
 
@@ -134,7 +138,7 @@ _Important Notes_
 
 3. By convention modules accesible on github is named: _github.com/module/packagename_
 
-4. If you have a local module and you want to **import local package**. Your *go.mod* may look like this:
+4. If you have a local module and you want to **import local package**. Your _go.mod_ may look like this:
 
 ```
 module module/name
@@ -166,9 +170,7 @@ require github.com/some/module vsome.version
 
 ```
 
-
-
-#### D.  Everything in the same package will be automatically visible to the others in the same package
+#### D. Everything in the same package will be automatically visible to the others in the same package
 
 Delete downloaded modules: `go clean -modcache`
 
@@ -187,3 +189,4 @@ Go web application: https://golang.org/doc/articles/wiki/
 Go basics: https://www.youtube.com/watch?v=YS4e4q9oBaU
 
 Go concurrency: https://www.youtube.com/watch?v=f6kdp27TYZs
+```
