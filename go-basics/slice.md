@@ -24,11 +24,11 @@ fmt.Println(len(a)) // 2
 fmt.Println(cap(a)) // 2
 ```
 
-C. Make - creates array with zeroed values
+C. Make - initializes slice, array and channels.
 
 ```
 // make(type, size, capacity)
-a := make([]int, 3, 100)
+a := make([]int, 3, 100) // initialized with zeroed values
 fmt.Println(a)             // [0 0 0]
 fmt.Printf("%v\n", len(a)) // 3
 fmt.Printf("%v\n", cap(a)) // 100
