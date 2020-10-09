@@ -24,7 +24,7 @@ fmt.Println(len(a)) // 2
 fmt.Println(cap(a)) // 2
 ```
 
-C. Make - initializes slice, array and channels.
+C. make(T, args) - initializes slice, map and channels, returns initialized (not zeroed) value of type T (not *T)
 
 ```
 // make(type, size, capacity)
