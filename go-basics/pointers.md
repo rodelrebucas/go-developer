@@ -21,7 +21,7 @@ fmt.Printf("%v %p, %p", a, b, c) // value, pointer, pointer
 // [1 2 3] 0xc00001e400, 0xc00001e408
 ```
 
-C. new - use to allocate _zeroed storage/memory_ and returns its address. **Does not** *initialize it*.
+C. new(T) - use to allocate _zeroed storage/memory_ of type T and returns its address. **Does not** *initialize it*.
 
 ```
 var ms *myStruct
