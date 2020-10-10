@@ -69,7 +69,8 @@ go func(ch <-chan int) {
 go func(ch chan<- int) {
     ch <- 1
     ch <- 2
-    close(ch) // Closing the channel is important to stop the loop
+	// Signals that channel has stopped receiving data.
+    close(ch)
     wg.Done()
 }(ch)
 ```
