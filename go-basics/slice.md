@@ -24,11 +24,11 @@ fmt.Println(len(a)) // 2
 fmt.Println(cap(a)) // 2
 ```
 
-C. make(T, args) - initializes slice, map and channels, returns initialized (not zeroed) value of type T (not *T)
+C. make(T, args) - initializes slice, map and channels, returns initialized value of type T (not *T)
 
 ```
 // make(type, size, capacity)
-a := make([]int, 3, 100) // initialized with zeroed values
+a := make([]int, 3, 100) // initialized with default values of type T
 fmt.Println(a)             // [0 0 0]
 fmt.Printf("%v\n", len(a)) // 3
 fmt.Printf("%v\n", cap(a)) // 100

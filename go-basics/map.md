@@ -13,16 +13,16 @@ B. instantiating the map without values
 
 ```
 options := make(map[string]string)
-options = map[string]string{
-    "a": "option A",
-    "b": "option B",
-}
-fmt.Println(options)
+fmt.Println(options) // map[]
 ```
 
 C. Using maps
 
 ```
+options = map[string]string{
+    "a": "option A",
+    "b": "option B",
+}
 fmt.Println(options["a"]) // Option A
 ```
 

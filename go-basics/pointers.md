@@ -24,13 +24,14 @@ fmt.Printf("%v %p, %p", a, b, c) // value, pointer, pointer
 C. new(T) - use to allocate _zeroed storage/memory_ of type T and returns its address. **Does not** *initialize it*.
 
 ```
+type myStruct struct {
+    foo int
+}
 var ms *myStruct
 ms = new(myStruct)
 (*ms).foo = 1 // same as ms.foo = 1
-fmt.Println(ms)
-// &{1}
+fmt.Println(ms) // &{1}
+fmt.Println(ms.foo) // 1
+fmt.Println(*ms) // {1} 
 
-type myStruct struct {
-foo int
-}
 ```
