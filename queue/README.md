@@ -1,3 +1,13 @@
+### Getting started
+
+Post a job:
+
+`curl -X POST -H "Content-Type: application/json" -d '{"name": "job one"}' http://localhost:8000/task`
+
+Successful Response:
+
+`{"msg":"task created!"}`
+
 ### Basic queue implementation in Golang
 
 1. Creating a job:
