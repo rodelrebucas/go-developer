@@ -146,7 +146,7 @@ module module/name
 require (
     "some-dependency"
 )
-replace module/name =>  ./package
+replace module/name/packagename =>  ./packagedir
 ```
 
 #### C. Using go modules to automatically download dependencies
