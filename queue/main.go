@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"xcrap/api/queue"
+	"gettingstarted/queue/queue"
 
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
@@ -26,8 +26,9 @@ func enqueue(j queue.Job, jobs chan<- queue.Job) bool {
 
 func worker(jChan <-chan queue.Job) {
 	for j := range jChan {
-		fmt.Println(j.Name)
+		fmt.Println("Executing", j.Name)
 		j.Task.Execute()
+		fmt.Println("\nExecuting " + j.Name + " Done!")
 	}
 }
 
@@ -62,10 +63,11 @@ func main() {
 				Msg: "Queue full",
 			})
 		}
+
 		return c.JSON(http.StatusOK, struct {
 			Msg string `json:"msg"`
 		}{
-			Msg: "task created!",
+			Msg: "Task created!",
 		})
 	})
 

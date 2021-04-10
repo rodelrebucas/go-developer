@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"gettingstarted/queue/queue"
 	"time"
-	"xcrap/api/queue"
 )
 
 // CreateJob  define your tasks here
@@ -12,8 +12,8 @@ func CreateJob(name string) queue.Job {
 	j := queue.Job{}
 	j.Name = name
 	j.Task = queue.CreateTask(func() {
+		fmt.Print("I'm doing something!")
 		time.Sleep(5000 * time.Millisecond)
-		fmt.Print("Task ...1")
 	})
 	return j
 }

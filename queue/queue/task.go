@@ -1,10 +1,5 @@
 package queue
 
-// Tasker interface
-type Tasker interface {
-	Execute()
-}
-
 // Task type
 type Task struct {
 	T func()
@@ -16,6 +11,6 @@ func (T *Task) Execute() {
 }
 
 // CreateTask task
-func CreateTask(f func()) Tasker {
-	return &Task{f}
+func CreateTask(f func()) Task {
+	return Task{f}
 }
