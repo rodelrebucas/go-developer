@@ -115,24 +115,21 @@ B2. Using your own package with go modules
 
 4. `go install` to create binary file in `bin/` folder
 
-_go.mod_
+5. Importing
 
-```
-module module/name
+_go.mod sample file_
 
-go 1.13
-```
+    module module/name
 
-_main.go_
+    go 1.13
 
-```
-import module/name/packagename
+_main.go sample file_
 
-```
+    import module/name/packagename
 
 _Important Notes_
 
-1. go **looks for the directory** where the dependencies are **installed** - this is the **GOPATH** directory.
+1. Go **looks for the directory** where the dependencies are **installed** - this is the **GOPATH** directory.
 
 2. If it is not present in **GOPATH**, go tries to download the module using the module/name/packagename.
 
@@ -172,13 +169,17 @@ require github.com/some/module vsome.version
 
 #### D. Everything in the same package will be automatically visible to the others in the same package
 
-Delete downloaded modules: `go clean -modcache`
+#### E. Delete downloaded modules:
 
-Remove unused package/s: `go mod tidy`
+    go clean -modcache
 
-#### Building single binary
+#### F. Remove unused package/s:
+    
+    go mod tidy
 
-`CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o <binary-name> <root-folder-your-go-module>`
+#### G. Building single binary
+
+`CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -o <binary-name> <root-folder-of-your-go-module>`
 
 ```
 
