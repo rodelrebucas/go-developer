@@ -44,7 +44,7 @@ func greet4(msg string) string {
 
 E. Return a pointer - pointer return value is created on Heap rather than the stack,
 since variables in the function is created on that function's stack
-and deleted after the fn finishes execution or returns
+and deleted after the function executes or returns
 
 ```
 func sum(values ...int) *int {
@@ -120,8 +120,8 @@ type greeter struct {
 }
 
 // method greet
-func (g greeter) greet() { // (g greeter) is value receiver - operating on a copy
+func (g greeter) greet() { // (g greeter) is a value receiver - operating on a copy
 	fmt.Println(g.greeting, g.name)
 }
-// func (g *greeter) greet() {}  - // (g greeter) is pointer receiver - operating on a pointer
+// func (g *greeter) greet() {}  - // (g greeter) is a pointer receiver - operating on a pointer
 ```

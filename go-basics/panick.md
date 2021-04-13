@@ -11,39 +11,45 @@ fmt.Println("end") // unreachable
 
 ```
 
-B. `panic` executes after `defer`
-
-C. Use `recover` to recover from `panic`. Use only inside `defer` functions
+B. Use `recover` to recover from `panic`. Use only inside `defer` functions
 
 ```
+package main
+
+import (
+	"fmt"
+	"log"
+)
+
 // import fmt, panic, log
 func main() {
-    fmt.Println("start")
-    // higher function in call stack will continue unless panic is re throwed
-    panicker()
-    fmt.Prinln("end")
+	fmt.Println("start")
+	// higher function in call stack will continue unless panic is re throwed
+	panicker()
+	// Executed if panic is handled and not re throwed
+	fmt.Println("end")
 }
 
 func panicker() {
-    // this function will panic and not continue
-    fmt.Println("panic start")
-    defer func() {
-        if err := recover(); err != nil {
-            log.Println("Error: ", err) // gets the panic error
-            // with re-panic
-            // panic(err) - this will re throw the panic and stops the caller
-            // start
-            // panic start
-            // Error: ...
-            // Panic details ...
-        }
-    }()
-    panic("something bad happened")
-    fmt.Println("done panicking")
+	fmt.Println("panic start")
+	defer func() {
+		if err := recover(); err != nil {
+			log.Println("Recovering Error: ", err) // gets the panic error
+
+			// with re-panic, this function will panic and not continue
+			// panic(err) // this will re throw the panic and stops the caller
+			// start
+			// panic start
+			// Recovering Error: ...
+			// Panic details ...
+		}
+	}()
+	panic("something bad happened")
 }
-// without re panic
+
+// without repanic
 // start
 // panic start
-// Error: ...
+// Recovering Error: ...
 // end
 ```

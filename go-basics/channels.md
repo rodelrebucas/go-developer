@@ -5,26 +5,27 @@ A. Channels is the way for the goroutine to communicate with each other by sendi
 var wg = sync.WaitGroup{}
 
 func main() {
-	// 1. create the channel
+	// 1. Create the channel
 	ch := make(chan int)
 
-	// 2. add 2 goroutine to the waiting group
+	// 2. Add 2 goroutine to the waiting group
 	wg.Add(2)
 
-	// 3. create the goroutines
-
-	// receiving from
+	// 3. Create the goroutine that receives from the channel
 	go func() {
-		i := <-ch
+		i := <-ch // receive
 		fmt.Println(i)
 		wg.Done()
 	}()
 
-	// sending to (passes a copy), blocking statement until a receiver is found
+	// Create the goroutine that sends to the channel
 	go func() {
+		// sending to (passes a copy), blocking statement until a receiver is found
 		ch <- 1
 		wg.Done()
 	}()
+
+	// For all all goroutines to finish
 	wg.Wait()
 
 }

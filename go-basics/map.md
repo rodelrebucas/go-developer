@@ -1,4 +1,4 @@
-A. map[< key typed >]< value typed >{}
+A. map[< key type >]< value type >{}
 
 ```
 countryPopulations := map[string]int{
@@ -39,7 +39,7 @@ E. Deleting value
 delete(options, "a")
 ```
 
-F. Checking if value exist
+F. Checking if value exists
 
 ```
 value, ok := options["b"]

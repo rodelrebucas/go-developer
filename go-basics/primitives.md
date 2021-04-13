@@ -18,7 +18,7 @@ unsigned:
 
     uint, uint8, uint16, unint32
 
-byte - is an alias for 8bit unsigned integer so unint8 == byte
+byte - is an alias for 8bit unsigned integer so uint8 == byte
 
 \*Operation on different types is invalid
 
@@ -33,18 +33,15 @@ b := 3 //  0011
 fmt.Println(a & b) // 2 = 0010
 fmt.Println( a | b) // 11 = 1011
 fmt.Println(a ^ b) // 9 = 1001
-fmt.Println(a &^ b) // 8 = 1000
-// AND NOT
-// a AND NOT b
-// 1010 & 1100 = 1000
+fmt.Println(a &^ b) // 8 = 1000 // (a=1010) & (^b = 1100) = 1000
 ```
 
 D. Bit shifting
 
 ```
-a := 8 // 2^3 = 1000
-fmt.Println( a << 3) // 64 = 2^3 * 2^3 = 100 0000
-fmt.Println( a >> 3) // 1 = 2^3 / 2^3 = 0001
+a := 8
+fmt.Println(a << 3) // 64 - from 1000 move 3 bits to the left - 0100 0000 or 64
+fmt.Println(a >> 3) // 1 - from 1000 move 3 bits to the right - 0001 or 1
 ```
 
 E. Floating Numbers: `float32 and float64`
@@ -66,10 +63,10 @@ String - any utf8 character, read-only slice of bytes
 
 ```
 s := "String example"
-fmt.Println(s) // "String example"
-fmt.Println(s[2]) // "114"
-fmt.Printf("%T", s[2]) // uint8
-fmt.Printf("%v", strin(s[s])) // r
+fmt.Println(s)                   // "String example"
+fmt.Println(s[2])                // "114"
+fmt.Printf("%T", s[2])           // uint8
+fmt.Printf("\n%v", string(s[2])) // r
 ```
 
 Operations
